@@ -1,0 +1,21 @@
+#heroSection {
+    background: url('/images/bradley-mubenga-coding-background.JPG') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black;
+
+    h1{
+        color: white;
+    }
+}
+
+#aboutSection {
+    background-color: black;
+    color: white;
+
+    .imageLink:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,89 @@
+// X Small devices (landscape phones, 576px and down)
+@media (max-width: 575px) {
+    .largeH1 {
+        padding: 0;
+        margin: 0;
+        font-size: 17vw;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .pText {
+        padding: 0;
+        margin: 0;
+        font-size: 7vw;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .largeH1 {
+        padding: 0;
+        margin: 0;
+        font-size: 15vw;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .pText {
+        padding: 0;
+        margin: 0;
+        font-size: 5vw;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .largeH1 {
+        padding: 0;
+        margin: 0;
+        font-size: 13vw;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .pText {
+        padding: 0;
+        margin: 0;
+        font-size: 5vw;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .largeH1 {
+        padding: 0;
+        margin: 0;
+        font-size: 10vw;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .pText {
+        padding: 0;
+        margin: 0;
+        font-size: 2vw;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .largeH1 {
+        padding: 0;
+        margin: 0;
+        font-size: 8vw;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    .largeH1 {
+        padding: 0;
+        margin: 0;
+        font-size: 7vw;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
