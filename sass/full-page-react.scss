@@ -6,11 +6,16 @@
 
 .fpParentElement {
     height: 100vh;
-    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+    scroll-snap-align: start !important;
 }
 
 .fpChildElement {
-    scroll-snap-type: y mandatory;
+    scroll-snap-align: start;
     overflow-y: scroll;
     height: 100vh;
 }

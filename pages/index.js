@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 //React & Next.js Components
 import Header from '../components/Header';
-import { HeroSection, AboutSection } from '../components/Home';
+import { HeroSection, AboutSection, RecentProjects } from '../components/Home';
 
 export default function Home() {
   return (
@@ -13,10 +13,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
+
       <main className="fpParentElement">
-        <Header />
         <HeroSection />
         <AboutSection />
+        <RecentProjects />
       </main>
     </>
   )

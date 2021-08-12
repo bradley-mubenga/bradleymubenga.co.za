@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 //Next.js & Reat.js Components
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Header() {
+    const [ isMobile, setMobile ] = useState(false);
+
+    useEffect(() => {
+        if (window.screen.width < 768) {
+            setMobile(true)
+        }
+
+        else {
+            setMobile(false)
+        }
+    })
+
     return (
-        <header class="fixed-top container" id="header">
-            <nav class="py-3">
-                <div class="d-flex align-items-center justify-content-between">
+        <header className={ isMobile ? "fixed-top container-fluid px-4" : "fixed-top container"} id="header">
+            <nav className="py-3">
+                <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                         <Link href="#">
-                            <a className="navbar-brand pText logoText"><Image className="img-fluid" src={'/icons/bradley-mubenga-emblem.png'} height="55" width="55" /></a>
+                            <a className="navbar-brand pText logoText"><Image className="img-fluid" src={'/icons/bradley-mubenga-emblem.png'} height={isMobile ? "30" : "55"} width={isMobile ? "30" : "60"} /></a>
                         </Link>
                     </div>
                     
                     <div>
                         <Link href="/">
-                            <a><Image src={'/icons/hamburger-menu.png'} height="69" width="69" /></a>
+                            <a><Image src={'/icons/hamburger-menu.png'} height={isMobile ? "35" : "69"} width={isMobile ? "35" : "69"}/></a>
                         </Link>
                     </div>
                 </div>

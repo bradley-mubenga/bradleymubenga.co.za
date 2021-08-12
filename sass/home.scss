@@ -1,3 +1,12 @@
+#header {
+    z-index: 10;
+
+    .logoText {
+        font-style: italic;
+        color: white;
+    }
+}
+
 #heroSection {
     background: url('/images/bradley-mubenga-coding-background.JPG') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -28,11 +37,24 @@
     }
 }
 
-#header {
-    z-index: 10;
+#projectsSection {
+    background-color: black;
+    color: white;
 
-    .logoText {
-        font-style: italic;
-        color: white;
+    .card {
+        background-color: white;
+        border: none;
+        border-radius: 0;
+        padding: 15px;
+        width: 18rem;
+    }
+
+    .card-body {
+        background-color: black;
+
+        a {
+            color: white;
+            text-decoration: underline !important;
+        }
     }
 }

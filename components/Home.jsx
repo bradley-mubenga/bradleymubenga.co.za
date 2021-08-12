@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 //React & Next.js Components
 import Image from 'next/image';
 import Link from 'next/link';
+import ProjectCard from './ProjectCard';
 
 //Hero Section
 export function HeroSection() {
@@ -82,3 +83,35 @@ export function AboutSection() {
         </section>
     )
 }
+
+
+//Recent Projects Section
+export function RecentProjects() {
+    return (
+        <section id="projectsSection" className="fpChildElement py-5">
+            <div className="container d-flex align-items-center justify-content-center">
+                <div>
+                    <div className="text-center">
+                        <h1 className="largeH1">Recent Projects</h1>
+                    </div>
+
+                    {/* Load Data From Strapi Blog API Then Render Projects*/}
+                    <div className="d-flex gap-3 flex-wrap justify-content-center row pt-4">
+                        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
+                            <ProjectCard />
+                        </div>
+
+                        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
+                            <ProjectCard />
+                        </div>
+
+                        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
+                            <ProjectCard />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
