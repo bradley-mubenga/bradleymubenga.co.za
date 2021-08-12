@@ -21,7 +21,9 @@ export function HeroSection() {
 
                     <div className="text-center justify-content-end pt-5">
                         <Link href="#aboutSection">
-                            <Image src="/images/down-arrow.png" height="77" width="77" className={ pointerAnimation ? ('animate__animated animate__slideInDown animate__slow-3s animate__infinite') : ('imageLink') } onMouseOver={() => setPointerAnimation(false)} onMouseLeave={() => setPointerAnimation(true)}/>
+                            <a>
+                                <Image src="/images/down-arrow.png" height="77" width="77" className={ pointerAnimation ? ('animate__animated animate__slideInDown animate__slow-3s animate__infinite') : ('imageLink') } onMouseOver={() => setPointerAnimation(false)} onMouseLeave={() => setPointerAnimation(true)}/>
+                            </a>
                         </Link>
                     </div>
                 </div>

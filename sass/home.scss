@@ -27,3 +27,12 @@
         cursor: pointer;
     }
 }
+
+#header {
+    z-index: 10;
+
+    .logoText {
+        font-style: italic;
+        color: white;
+    }
+}
