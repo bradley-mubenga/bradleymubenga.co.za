@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 //React & Next.js Components
+import Header from '../components/Header';
 import { HeroSection, AboutSection } from '../components/Home';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <main className="fpParentElement">
+        <Header />
         <HeroSection />
         <AboutSection />
       </main>

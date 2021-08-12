@@ -6,6 +6,9 @@ import Link from 'next/link';
 
 //Hero Section
 export function HeroSection() {
+    //State that sets the mouse pinter animation on and off.
+    const [ pointerAnimation, setPointerAnimation ] = useState(true);
+
     return (
         <section id="heroSection" className="fpChildElement d-flex align-items-center">
             <div className="container d-flex justify-content-center">
@@ -17,7 +20,9 @@ export function HeroSection() {
                     </div>
 
                     <div className="text-center justify-content-end pt-5">
-                        <Image src="/images/down-arrow.png" height="77" width="77"/>
+                        <Link href="#aboutSection">
+                            <Image src="/images/down-arrow.png" height="77" width="77" className={ pointerAnimation ? ('animate__animated animate__slideInDown animate__slow-3s animate__infinite') : ('imageLink') } onMouseOver={() => setPointerAnimation(false)} onMouseLeave={() => setPointerAnimation(true)}/>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -57,13 +62,13 @@ export function AboutSection() {
 
                     <div className="pt-4">
                         <Link href="https://linkedin.com/in/bradley-mubenga">
-                            <Image src="/icons/linked-in-icon.png" height="45" width="45" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
+                            <Image src="/icons/linked-in-icon.png" height="57" width="57" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
                         </Link>
                         
                         <span className="px-2"></span>
 
                         <Link href="https://github.com/bradley-mubenga">
-                            <Image src="/icons/github-icon.png" height="45" width="45" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
+                            <Image src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
                         </Link>
                     </div>
                 </div>
