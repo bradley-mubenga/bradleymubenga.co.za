@@ -6,15 +6,17 @@
 * {
     font-family: CrimsonText !important;
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 body {
     border: none !important;
     margin: 0 !important;
+    scroll-behavior: smooth !important;
 }
 
 a {

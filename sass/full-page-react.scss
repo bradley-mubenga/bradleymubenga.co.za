@@ -7,7 +7,7 @@
 .fpParentElement {
     height: 100vh;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
 }
 
 section {
@@ -16,6 +16,6 @@ section {
 
 .fpChildElement {
     scroll-snap-align: start;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     height: 100vh;
 }
