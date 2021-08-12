@@ -78,7 +78,7 @@ export function AboutSection() {
             </div>
 
             {
-                isResponsive ? <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6" id="aboutImage"> <Image src="/images/bradley-mubenga-about-me-mobile.jpg" height="1000" width="1500"/></div> : (``)
+                isResponsive ? <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6" id="aboutImage"><Image src="/images/bradley-mubenga-about-me-mobile.jpg" height="1000" width="1500"/></div> : (``)
             }
         </section>
     )
@@ -114,4 +114,46 @@ export function RecentProjects() {
         </section>
     )
 }
+
+//Contact Form Section
+export function ContactForm() {
+    //State To Check If Mouse If Hovering And The Execute Animations
+    const [ isLinkedInHover, setLinkedInHover ] = useState(false);
+        
+    return (
+        <section id="contactForm" className="fpChildElement py-5">
+            <div className="container d-flex align-items-center justify-content-center">
+                <div>
+                    <div className="text-center">
+                        <h1 className="largeH1">Contact</h1>
+                    </div>
+
+                    <div className="pt-4">
+                        <div className="pb-5">
+                            <form className="d-flex justify-content-center flex-column gap-3">
+                                <p className="pText">Name</p>
+                                <input type="text" placeholder="Your name.." className="formInput"/>
+
+                                <p className="pText">Subject</p>
+                                <input type="text" placeholder="How can I help you?." className="formInput"/>
+
+                                <p className="pText">Message (Optional)</p>
+                                <textarea placeholder="Write something.."  className="formInput"></textarea>
+
+                                <div>
+                                    <button className="submitButton pText">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <Link href="/">
+                            <a className="pText pt-5"><Image src="/icons/email-icon.png" height="35" width="35" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/> <span className="px-1"></span>mubengabradley@gmail.com</a>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
 

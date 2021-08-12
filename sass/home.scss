@@ -58,3 +58,31 @@
         }
     }
 }
+
+#contactForm {
+    background-color: black;
+    color: white;
+
+    .formInput {
+        border: white 7px solid;
+        background: black;
+        padding: 10px;
+    }
+
+    .formInput:focus {
+        background: white;
+        box-shadow: none;
+    }
+
+    .submitButton {
+        background: white;
+        color: black;
+        border: none;
+        padding: 10px 25px;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
