@@ -22,13 +22,14 @@ export default function Header() {
             <nav className="py-3">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
-                        <Link href="/">
+                        <Link href="/" replace>
                             <a className="navbar-brand pText logoText"><Image alt="" className="img-fluid" src={'/icons/bradley-mubenga-emblem.png'} height={isMobile ? "30" : "55"} width={isMobile ? "30" : "60"} /></a>
                         </Link>
                     </div>
                     
                     <div>
-                        <Link href="/">
+                        {/** 'Render A Link Page That Will Direct You round.'*/}
+                        <Link href="/" replace>
                             <a><Image alt="" src={'/icons/hamburger-menu.png'} height={isMobile ? "35" : "69"} width={isMobile ? "35" : "69"}/></a>
                         </Link>
                     </div>
