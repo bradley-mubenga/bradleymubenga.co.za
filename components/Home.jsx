@@ -11,7 +11,7 @@ export function HeroSection() {
     const [ pointerAnimation, setPointerAnimation ] = useState(true);
 
     return (
-        <section id="heroSection" className="fpChildElement d-flex align-items-center animate__animated animate__fadeIn">
+        <section id="heroSection" className="fpChildElement d-flex align-items-center animate__animated animate__fadeIn animate__delay-1s">
             <div className="container d-flex justify-content-center">
                 <div className="d-flex flex-column">
                     <div className="text-center">

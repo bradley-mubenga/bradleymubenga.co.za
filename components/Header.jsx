@@ -18,7 +18,7 @@ export default function Header() {
     },[])
 
     return (
-        <header className={ isMobile ? "fixed-top container-fluid px-4" : "fixed-top container"} id="header">
+        <header className={ isMobile ? "fixed-top container-fluid px-4 animate__animated animate__fadeIn" : "fixed-top container animate__animated animate__fadeIn"} id="header">
             <nav className="py-3">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
