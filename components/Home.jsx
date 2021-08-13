@@ -65,13 +65,17 @@ export function AboutSection() {
 
                     <div className="pt-4">
                         <Link href="https://linkedin.com/in/bradley-mubenga">
-                            <Image src="/icons/linked-in-icon.png" height="57" width="57" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
+                            <a>
+                                <Image src="/icons/linked-in-icon.png" height="57" width="57" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
+                            </a>
                         </Link>
                         
                         <span className="px-2"></span>
 
                         <Link href="https://github.com/bradley-mubenga">
-                            <Image src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
+                            <a>
+                                <Image src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
+                            </a>
                         </Link>
                     </div>
                 </div>
@@ -110,7 +114,7 @@ export function RecentProjects() {
                     <div className="d-flex gap-3 flex-wrap justify-content-center row pt-4">
                         { projectData ? (projectData.map((project, key) => {
                             return <div key={key} className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
-                                <ProjectCard project={project} title={project.title} thumbNail={project.imageOne.formats.thumbnail.url}/>
+                                <ProjectCard project={project} title={project.title} thumbNail={project.imageOne.formats.small.url}/>
                             </div>
                         })) : (<h1>Loading</h1>)
                         }
