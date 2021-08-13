@@ -65,7 +65,7 @@ export function AboutSection() {
 
                     <div className="pt-4">
                         <Link href="https://linkedin.com/in/bradley-mubenga">
-                            <a>
+                            <a target="_blank">
                                 <Image alt="" src="/icons/linked-in-icon.png" height="57" width="57" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
                             </a>
                         </Link>
@@ -73,7 +73,7 @@ export function AboutSection() {
                         <span className="px-2"></span>
 
                         <Link href="https://github.com/bradley-mubenga">
-                            <a>
+                            <a target="_blank">
                                 <Image alt="" src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
                             </a>
                         </Link>
@@ -159,9 +159,11 @@ export function ContactForm() {
                             </form>
                         </div>
 
-                        <Link href="mailto:mubengabradley@gmail.com">
-                            <a className="pText pt-5 linkText"><Image src="/icons/email-icon.png" height="35" width="35" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)} alt=""/> <span className="px-1"></span>mubengabradley@gmail.com</a>
-                        </Link>
+                        <div className="text-center">
+                            <Link href="mailto:mubengabradley@gmail.com">
+                                <a className="pText pt-5 linkText">mubengabradley@gmail.com</a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
