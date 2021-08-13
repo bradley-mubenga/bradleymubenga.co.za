@@ -22,7 +22,7 @@ export default function Header() {
             <nav className="py-3">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
-                        <Link href="#">
+                        <Link href="/">
                             <a className="navbar-brand pText logoText"><Image className="img-fluid" src={'/icons/bradley-mubenga-emblem.png'} height={isMobile ? "30" : "55"} width={isMobile ? "30" : "60"} /></a>
                         </Link>
                     </div>

@@ -1,0 +1,16 @@
+#caseStudy {
+    color: white;
+
+    p {
+        color: white;
+    }
+    
+    .linkText {
+        color: white;
+        text-decoration: underline !important;
+    }
+
+    .linkText:hover {
+        color: grey;
+    }
+}

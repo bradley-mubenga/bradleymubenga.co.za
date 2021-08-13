@@ -11,7 +11,7 @@ export function HeroSection() {
     const [ pointerAnimation, setPointerAnimation ] = useState(true);
 
     return (
-        <section id="heroSection" className="fpChildElement d-flex align-items-center">
+        <section id="heroSection" className="fpChildElement d-flex align-items-center animate__animated animate__fadeIn">
             <div className="container d-flex justify-content-center">
                 <div className="d-flex flex-column">
                     <div className="text-center">
@@ -21,7 +21,7 @@ export function HeroSection() {
                     </div>
 
                     <div className="text-center justify-content-end pt-5">
-                        <Link href="#aboutSection">
+                        <Link href="/#aboutSection" replace>
                             <a>
                                 <Image src="/images/down-arrow.png" height="77" width="77" className={ pointerAnimation ? ('animate__animated animate__slideInDown animate__slow-3s animate__infinite') : ('imageLink') } onMouseOver={() => setPointerAnimation(false)} onMouseLeave={() => setPointerAnimation(true)}/>
                             </a>
@@ -90,15 +90,18 @@ export function AboutSection() {
 
 
 //Recent Projects Section
-export function RecentProjects() {
-    //
-    const [ projectData, setProjectData ] = useState([]);
+export function RecentProjects({ projectData }) {
+    //This state and useEffect changes the hostname variable depending if it is in production or development.
+    const [ hostName, setHostName ] = useState('');
 
-    //
     useEffect(() => {
-        fetch('https://server-my-portfolio.herokuapp.com/articles')
-        .then(res => res.json())
-        .then(data => setProjectData(data))
+        if (window.location.hostname === 'localhost') {
+        setHostName('http://localhost:1337')
+        }
+
+        else {
+        setHostName('https://server-my-portfolio.herokuapp.com')
+        }
     }, []);
 
 
@@ -114,7 +117,7 @@ export function RecentProjects() {
                     <div className="d-flex gap-3 flex-wrap justify-content-center row pt-4">
                         { projectData ? (projectData.map((project, key) => {
                             return <div key={key} className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
-                                <ProjectCard project={project} title={project.title} thumbNail={project.imageOne.formats.small.url}/>
+                                <ProjectCard param={key} title={project.title} hostName={hostName} thumbNail={project.imageOne.formats.small.url}/>
                             </div>
                         })) : (<h1>Loading</h1>)
                         }
@@ -140,15 +143,15 @@ export function ContactForm() {
 
                     <div className="pt-4">
                         <div className="pb-5">
-                            <form className="d-flex justify-content-center flex-column gap-3">
+                            <form className="d-flex justify-content-center flex-column gap-3" action="https://formsubmit.co/mubengabradley@gmail.com" method="POST">
                                 <p className="pText">Name</p>
-                                <input type="text" placeholder="Your name.." className="formInput"/>
+                                <input name="name" type="text" placeholder="Your name.." className="formInput"/>
 
                                 <p className="pText">Subject</p>
-                                <input type="text" placeholder="How can I help you?." className="formInput"/>
+                                <input name="email" type="email" placeholder="Your email.." className="formInput"/>
 
-                                <p className="pText">Message (Optional)</p>
-                                <textarea placeholder="Write something.."  className="formInput"></textarea>
+                                <p className="pText">Message</p>
+                                <textarea name="pain-point" placeholder="How can I help you?"  className="formInput"></textarea>
 
                                 <div>
                                     <button className="submitButton pText">Submit</button>
@@ -156,8 +159,8 @@ export function ContactForm() {
                             </form>
                         </div>
 
-                        <Link href="/">
-                            <a className="pText pt-5"><Image src="/icons/email-icon.png" height="35" width="35" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/> <span className="px-1"></span>mubengabradley@gmail.com</a>
+                        <Link href="mailto:mubengabradley@gmail.com">
+                            <a className="pText pt-5 linkText"><Image src="/icons/email-icon.png" height="35" width="35" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/> <span className="px-1"></span>mubengabradley@gmail.com</a>
                         </Link>
                     </div>
                 </div>

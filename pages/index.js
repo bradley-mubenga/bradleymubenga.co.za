@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import { HeroSection, AboutSection, RecentProjects, ContactForm } from '../components/Home';
 
-export default function Home() {
+export default function Home({ projectData }) {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ export default function Home() {
       <main className="fpParentElement">
         <HeroSection />
         <AboutSection />
-        <RecentProjects />
+        <RecentProjects projectData={projectData}/>
         <ContactForm />
       </main>
     </>
