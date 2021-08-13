@@ -62,7 +62,7 @@ function CaseStudy({ projectData }) {
                         </div>
                       </header>
 
-                      <div id="aboutImage"> <Image src={`${hostName}${caseStudy.imageOne.formats.medium.url}`} height="720" width="1280"/></div>
+                      <div id="aboutImage"> <Image alt="" src={`${hostName}${caseStudy.imageOne.formats.medium.url}`} height="720" width="1280"/></div>
 
                       <div className="py-5">
                         <p className="pText">{ caseStudy.paragraphOne }</p>
@@ -70,7 +70,7 @@ function CaseStudy({ projectData }) {
 
                       <div>
                         <h1 className="largeH1">Before.</h1>
-                        <Image src={`${hostName}${caseStudy.imageTwo.formats.medium.url}`} height="720" width="1280"/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageTwo.formats.medium.url}`} height="720" width="1280"/>
                       </div>
 
                       {console.log(window.location)}
@@ -81,7 +81,8 @@ function CaseStudy({ projectData }) {
 
                       <div>
                         <h1 className="largeH1">After.</h1>
-                        <Image src={`${hostName}${caseStudy.imageThree.formats.medium.url}`} height="720" width="1280"/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageThree.formats.medium.url}`} height="720" width="1280"/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageOne.formats.medium.url}`} height="720" width="1280"/>
                       </div>
 
                       <div className="py-5">
@@ -101,8 +102,8 @@ function CaseStudy({ projectData }) {
       </main>
     ) : (
       <div className="d-flex justify-content-center align-items-center fpChildElement">
-        <div class="spinner-grow text-light" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-light" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div>
     )

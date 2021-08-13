@@ -23,7 +23,7 @@ export function HeroSection() {
                     <div className="text-center justify-content-end pt-5">
                         <Link href="/#aboutSection" replace>
                             <a>
-                                <Image src="/images/down-arrow.png" height="77" width="77" className={ pointerAnimation ? ('animate__animated animate__slideInDown animate__slow-3s animate__infinite') : ('imageLink') } onMouseOver={() => setPointerAnimation(false)} onMouseLeave={() => setPointerAnimation(true)}/>
+                                <Image alt="" src="/images/down-arrow.png" height="77" width="77" className={ pointerAnimation ? ('animate__animated animate__slideInDown animate__slow-3s animate__infinite') : ('imageLink') } onMouseOver={() => setPointerAnimation(false)} onMouseLeave={() => setPointerAnimation(true)}/>
                             </a>
                         </Link>
                     </div>
@@ -55,7 +55,7 @@ export function AboutSection() {
     return (
         <section id="aboutSection" className="row">
             {
-                isResponsive ? (``) : <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6" id="aboutImage"> <Image src="/images/bradley-mubenga-about-me.jpg" height="3360" width="3360"/></div>
+                isResponsive ? (``) : <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6" id="aboutImage"> <Image alt="" src="/images/bradley-mubenga-about-me.jpg" height="3360" width="3360"/></div>
             }
 
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center py-5">
@@ -66,7 +66,7 @@ export function AboutSection() {
                     <div className="pt-4">
                         <Link href="https://linkedin.com/in/bradley-mubenga">
                             <a>
-                                <Image src="/icons/linked-in-icon.png" height="57" width="57" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
+                                <Image alt="" src="/icons/linked-in-icon.png" height="57" width="57" className={isGitHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setGitHover(true)} onMouseLeave={() => setGitHover(false)}/>
                             </a>
                         </Link>
                         
@@ -74,7 +74,7 @@ export function AboutSection() {
 
                         <Link href="https://github.com/bradley-mubenga">
                             <a>
-                                <Image src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)} alt=""/>
+                                <Image alt="" src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)} alt=""/>
                             </a>
                         </Link>
                     </div>
@@ -82,7 +82,7 @@ export function AboutSection() {
             </div>
 
             {
-                isResponsive ? <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6" id="aboutImage"><Image src="/images/bradley-mubenga-about-me-mobile.jpg" height="1000" width="1500"/></div> : (``)
+                isResponsive ? <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6" id="aboutImage"><Image alt="" src="/images/bradley-mubenga-about-me-mobile.jpg" height="1000" width="1500"/></div> : (``)
             }
         </section>
     )
