@@ -15,7 +15,7 @@ export default function Header() {
         else {
             setMobile(false)
         }
-    })
+    },[])
 
     return (
         <header className={ isMobile ? "fixed-top container-fluid px-4" : "fixed-top container"} id="header">
@@ -29,7 +29,7 @@ export default function Header() {
                     
                     <div>
                         <Link href="/">
-                            <a><Image src={'/icons/hamburger-menu.png'} height={isMobile ? "35" : "69"} width={isMobile ? "35" : "69"}/></a>
+                            <a><Image alt="" src={'/icons/hamburger-menu.png'} height={isMobile ? "35" : "69"} width={isMobile ? "35" : "69"}/></a>
                         </Link>
                     </div>
                 </div>

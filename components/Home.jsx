@@ -46,7 +46,7 @@ export function AboutSection() {
         else {
             setResponsive(false)
         }
-    });
+    },[]);
 
     //State To Check If Mouse If Hovering And The Execute Animations
     const [ isGitHover, setGitHover ] = useState(false);
@@ -74,7 +74,7 @@ export function AboutSection() {
 
                         <Link href="https://github.com/bradley-mubenga">
                             <a>
-                                <Image src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
+                                <Image src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)} alt=""/>
                             </a>
                         </Link>
                     </div>
@@ -160,7 +160,7 @@ export function ContactForm() {
                         </div>
 
                         <Link href="mailto:mubengabradley@gmail.com">
-                            <a className="pText pt-5 linkText"><Image src="/icons/email-icon.png" height="35" width="35" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/> <span className="px-1"></span>mubengabradley@gmail.com</a>
+                            <a className="pText pt-5 linkText"><Image src="/icons/email-icon.png" height="35" width="35" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)} alt=""/> <span className="px-1"></span>mubengabradley@gmail.com</a>
                         </Link>
                     </div>
                 </div>
