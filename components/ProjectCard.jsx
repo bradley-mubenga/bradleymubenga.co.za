@@ -4,14 +4,14 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ProjectCard() {
+export default function ProjectCard({project, title, thumbNail}) {
     return (
         <div className="card">
-            <Image src={'/images/space.jpeg'} className="card-img-top" height="2000" width="3000"/>
+            <Image src={`https://server-my-portfolio.herokuapp.com${thumbNail}`} className="card-img-top" height="2000" width="3000"/>
 
             <div className="card-body text-center">
                 <Link href={'/'}>
-                    <a className="pText">Indlela Media</a>
+                    <a className="pText">{title}</a>
                 </Link>
             </div>
         </div>

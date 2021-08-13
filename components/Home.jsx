@@ -87,27 +87,33 @@ export function AboutSection() {
 
 //Recent Projects Section
 export function RecentProjects() {
+    //
+    const [ projectData, setProjectData ] = useState([]);
+
+    //
+    useEffect(() => {
+        fetch('https://server-my-portfolio.herokuapp.com/articles')
+        .then(res => res.json())
+        .then(data => setProjectData(data))
+    }, []);
+
+
     return (
         <section id="projectsSection" className="fpChildElement py-5">
             <div className="container d-flex align-items-center justify-content-center">
                 <div>
                     <div className="text-center">
                         <h1 className="largeH1">Recent Projects</h1>
-                    </div>
+                    </div> 
 
                     {/* Load Data From Strapi Blog API Then Render Projects*/}
                     <div className="d-flex gap-3 flex-wrap justify-content-center row pt-4">
-                        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
-                            <ProjectCard />
-                        </div>
-
-                        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
-                            <ProjectCard />
-                        </div>
-
-                        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
-                            <ProjectCard />
-                        </div>
+                        { projectData ? (projectData.map((project, key) => {
+                            return <div key={key} className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
+                                <ProjectCard project={project} title={project.title} thumbNail={project.imageOne.formats.thumbnail.url}/>
+                            </div>
+                        })) : (<h1>Loading</h1>)
+                        }
                     </div>
                 </div>
             </div>
