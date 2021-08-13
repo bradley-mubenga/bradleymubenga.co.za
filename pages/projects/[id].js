@@ -62,7 +62,9 @@ function CaseStudy({ projectData }) {
                         </div>
                       </header>
 
-                      <div id="aboutImage"> <Image alt="" src={`${hostName}${caseStudy.imageOne.formats.medium.url}`} height="720" width="1280"/></div>
+                      <div id="aboutImage"> <Image alt="" src={`${hostName}${caseStudy.imageOne.url}`} height={caseStudy.imageOne.height} width={caseStudy.imageOne.width} /></div>
+
+                      {console.log(caseStudy.imageOne.medium)}
 
                       <div className="py-5">
                         <p className="pText">{ caseStudy.paragraphOne }</p>
@@ -70,7 +72,7 @@ function CaseStudy({ projectData }) {
 
                       <div>
                         <h1 className="largeH1">Before.</h1>
-                        <Image alt="" src={`${hostName}${caseStudy.imageTwo.formats.medium.url}`} height="720" width="1280"/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageTwo.url}`} height={caseStudy.imageTwo.height} width={caseStudy.imageTwo.width}/>
                       </div>
 
                       {console.log(window.location)}
@@ -81,12 +83,12 @@ function CaseStudy({ projectData }) {
 
                       <div>
                         <h1 className="largeH1">After.</h1>
-                        <Image alt="" src={`${hostName}${caseStudy.imageThree.formats.medium.url}`} height="720" width="1280"/>
-                        <Image alt="" src={`${hostName}${caseStudy.imageOne.formats.medium.url}`} height="720" width="1280"/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageThree.url}`} height={caseStudy.imageThree.height} width={caseStudy.imageThree.width}/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageOne.url}`} height={caseStudy.imageOne.height} width={caseStudy.imageOne.width}/>
                       </div>
 
                       <div className="py-5">
-                        <p className="pText">{ caseStudy.paragraphTwo }</p>
+                        <p className="pText">{ caseStudy.paragraphThree }</p>
                         <br></br>
                         <p className="pText">Thanks for reading this case study, I hope you enjoyed it. Feel free to reach out via social media or contact me via the email below.</p>
                       </div>
