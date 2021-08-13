@@ -94,7 +94,7 @@ function CaseStudy({ projectData }) {
 
                     <div className="text-center pt-5">
                       <Link href="mailto:mubengabradley@gmail.com">
-                          <a className="pText pt-5 linkText"><Image src="/icons/email-icon.png" height="35" width="35" className=' animate__animated animate__bounce imageLink' /> <span className="px-1"></span>mubengabradley@gmail.com</a>
+                          <a className="pText pt-5 linkText"><Image alt="" src="/icons/email-icon.png" height="35" width="35" className=' animate__animated animate__bounce imageLink' /> <span className="px-1"></span>mubengabradley@gmail.com</a>
                       </Link>
                     </div>
                 </div>

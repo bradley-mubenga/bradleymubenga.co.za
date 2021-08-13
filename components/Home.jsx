@@ -74,7 +74,7 @@ export function AboutSection() {
 
                         <Link href="https://github.com/bradley-mubenga">
                             <a>
-                                <Image alt="" src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)} alt=""/>
+                                <Image alt="" src="/icons/github-icon.png" height="57" width="57" className={isLinkedInHover ? ('animate__animated animate__bounce imageLink') : ('')} onMouseOver={() => setLinkedInHover(true)} onMouseLeave={() => setLinkedInHover(false)}/>
                             </a>
                         </Link>
                     </div>
