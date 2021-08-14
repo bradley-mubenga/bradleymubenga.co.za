@@ -91,19 +91,6 @@ export function AboutSection() {
 
 //Recent Projects Section
 export function RecentProjects({ projectData }) {
-    //This state and useEffect changes the hostname variable depending if it is in production or development.
-    const [ hostName, setHostName ] = useState('');
-
-    useEffect(() => {
-        if (window.location.hostname === 'localhost') {
-        setHostName('http://localhost:1337')
-        }
-
-        else {
-        setHostName('https://server-my-portfolio.herokuapp.com')
-        }
-    }, []);
-
 
     return (
         <section id="projectsSection" className="fpChildElement py-5">
@@ -117,7 +104,7 @@ export function RecentProjects({ projectData }) {
                     <div className="d-flex gap-3 flex-wrap justify-content-center row pt-4">
                         { projectData ? (projectData.map((project, key) => {
                             return <div key={key} className="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
-                                <ProjectCard param={key} title={project.title} hostName={hostName} thumbNail={project.imageOne.formats.small.url}/>
+                                <ProjectCard param={key} title={project.title} thumbNail={project.imageOne}/>
                             </div>
                         })) : (<h1>Loading</h1>)
                         }
