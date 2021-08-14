@@ -11,7 +11,7 @@ export default function ProjectCard({ param, title, hostName, thumbNail }) {
 
             <div className="card-body text-center">
                 <Link href={`${window.location.origin}/projects/${param}`} replace>
-                    <a className="pText">{title}</a>
+                    <a className="pText linkText">{title}</a>
                 </Link>
             </div>
         </div>

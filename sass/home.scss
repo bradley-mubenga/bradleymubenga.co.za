@@ -67,11 +67,15 @@
         border: white 7px solid;
         background: black;
         padding: 10px;
+        color: white;
     }
 
     .formInput:focus {
+        transition: ease-in-out 0.25s;
+        color: black;
         background: white;
         box-shadow: none;
+        outline: none;
     }
 
     .submitButton {

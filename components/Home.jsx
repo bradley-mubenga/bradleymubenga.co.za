@@ -143,11 +143,11 @@ export function ContactForm() {
 
                     <div className="pt-4">
                         <div className="pb-5">
-                            <form className="d-flex justify-content-center flex-column gap-3" action="https://formsubmit.co/mubengabradley@gmail.com" method="POST">
+                            <form className="d-flex justify-content-center flex-column gap-3" action="https://formsubmit.co/1b7572e568ebecc007d1eaa0d36d5b73" method="POST">
                                 <p className="pText">Name</p>
                                 <input name="name" type="text" placeholder="Your name.." className="formInput"/>
 
-                                <p className="pText">Subject</p>
+                                <p className="pText">Email</p>
                                 <input name="email" type="email" placeholder="Your email.." className="formInput"/>
 
                                 <p className="pText">Message</p>
