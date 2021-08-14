@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
       //PRODUCTION - 'https://server-my-portfolio.herokuapp.com/articles'
       //DEVELOPMENT - 'http://localhost:1337/articles
-      fetch('http://localhost:1337/articles')
+      fetch('https://server-my-portfolio.herokuapp.com/articles')
       .then(res => res.json())
       .then(data => setProjectData(data))
   }, []);
