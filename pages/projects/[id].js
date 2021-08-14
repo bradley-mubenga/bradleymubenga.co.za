@@ -62,9 +62,7 @@ function CaseStudy({ projectData }) {
                         </div>
                       </header>
 
-                      <div id="aboutImage"> <Image alt="" src={`${hostName}${caseStudy.imageOne.url}`} height={caseStudy.imageOne.height} width={caseStudy.imageOne.width} /></div>
-
-                      {console.log(caseStudy.imageOne.medium)}
+                      <div id="aboutImage"> <Image alt="" src={`${hostName}${caseStudy.imageOne.url}`} height={caseStudy.imageOne.height} width={caseStudy.imageOne.width} className="animate__animated animate__fadeIn"/></div>
 
                       <div className="py-5">
                         <p className="pText">{ caseStudy.paragraphOne }</p>
@@ -72,10 +70,8 @@ function CaseStudy({ projectData }) {
 
                       <div>
                         <h1 className="largeH1">Before.</h1>
-                        <Image alt="" src={`${hostName}${caseStudy.imageTwo.url}`} height={caseStudy.imageTwo.height} width={caseStudy.imageTwo.width}/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageTwo.url}`} height={caseStudy.imageTwo.height} width={caseStudy.imageTwo.width} className="animate__animated animate__fadeIn"/>
                       </div>
-
-                      {console.log(window.location)}
 
                       <div className="py-5">
                         <p className="pText">{ caseStudy.paragraphTwo }</p>
@@ -83,8 +79,8 @@ function CaseStudy({ projectData }) {
 
                       <div>
                         <h1 className="largeH1">After.</h1>
-                        <Image alt="" src={`${hostName}${caseStudy.imageThree.url}`} height={caseStudy.imageThree.height} width={caseStudy.imageThree.width}/>
-                        <Image alt="" src={`${hostName}${caseStudy.imageOne.url}`} height={caseStudy.imageOne.height} width={caseStudy.imageOne.width}/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageThree.url}`} height={caseStudy.imageThree.height} width={caseStudy.imageThree.width} className="animate__animated animate__fadeIn"/>
+                        <Image alt="" src={`${hostName}${caseStudy.imageOne.url}`} height={caseStudy.imageOne.height} width={caseStudy.imageOne.width} className="animate__animated animate__fadeIn"/>
                       </div>
 
                       <div className="py-5">
