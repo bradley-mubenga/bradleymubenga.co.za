@@ -152,9 +152,10 @@ export function ContactForm() {
 
                                 <p className="pText">Message</p>
                                 <textarea name="pain-point" placeholder="How can I help you?"  className="formInput"></textarea>
-
+                                
+                                {/** //TODO - ENABLE BUTTON ONLY IF EMAIL IS VALID AND OTHER FIELDS ARE INPUTED. RUN FUNCTION ONCHANGE AND CHANGE STATE IF ALL CONDITIONS ARE MET. */}
                                 <div>
-                                    <button className="submitButton pText">Submit</button>
+                                    <button className="btn submitButton pText" disabled>Submit</button>
                                 </div>
                             </form>
                         </div>
