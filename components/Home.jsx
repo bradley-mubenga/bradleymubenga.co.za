@@ -117,20 +117,7 @@ export function RecentProjects({ projectData }) {
 }
 
 //Contact Form Section
-export function ContactForm() {
-    //State To Check If Mouse If Hovering And The Execute Animations
-    const [ isForm, setFormState ] = useState('Hello');
-
-    //Our Contact Form State
-    const [ isName, setFormName ] = useState('');
-    const [ isEmail, setFormEmail] = useState('');
-    const [ isPainPoint, setPainPoint ] = useState('');
-
-    const setSubmit = () => {
-        console.log(isName, )
-    }
-
-        
+export function ContactForm() {        
     return (
         <section id="contactForm" className="fpChildElement py-5">
             <div className="container d-flex align-items-center justify-content-center">
