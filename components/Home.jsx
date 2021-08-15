@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProjectCard from './ProjectCard';
+import { isDynamicRoute } from 'next/dist/next-server/lib/router/utils';
 
 //Hero Section
 export function HeroSection() {
@@ -118,7 +119,17 @@ export function RecentProjects({ projectData }) {
 //Contact Form Section
 export function ContactForm() {
     //State To Check If Mouse If Hovering And The Execute Animations
-    const [ isLinkedInHover, setLinkedInHover ] = useState(false);
+    const [ isForm, setFormState ] = useState('Hello');
+
+    //Our Contact Form State
+    const [ isName, setFormName ] = useState('');
+    const [ isEmail, setFormEmail] = useState('');
+    const [ isPainPoint, setPainPoint ] = useState('');
+
+    const setSubmit = () => {
+        console.log(isName, )
+    }
+
         
     return (
         <section id="contactForm" className="fpChildElement py-5">
@@ -132,17 +143,16 @@ export function ContactForm() {
                         <div className="pb-5">
                             <form className="d-flex justify-content-center flex-column gap-3" action="https://formsubmit.co/1b7572e568ebecc007d1eaa0d36d5b73" method="POST">
                                 <p className="pText">Name</p>
-                                <input name="name" type="text" placeholder="Your name.." className="formInput"/>
+                                <input name="name" type="text" placeholder="Your name.." className="formInput" required/>
 
                                 <p className="pText">Email</p>
-                                <input name="email" type="email" placeholder="Your email.." className="formInput"/>
+                                <input name="email" type="email" placeholder="Your email.." className="formInput" required/>
 
                                 <p className="pText">Message</p>
-                                <textarea name="pain-point" placeholder="How can I help you?"  className="formInput"></textarea>
+                                <textarea name="pain-point" placeholder="How can I help you?"  className="formInput" required></textarea>
                                 
-                                {/** //TODO - ENABLE BUTTON ONLY IF EMAIL IS VALID AND OTHER FIELDS ARE INPUTED. RUN FUNCTION ONCHANGE AND CHANGE STATE IF ALL CONDITIONS ARE MET. */}
                                 <div>
-                                    <button className="btn submitButton pText" disabled>Submit</button>
+                                    <button className="btn submitButton pText">Submit</button>
                                 </div>
                             </form>
                         </div>
