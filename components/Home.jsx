@@ -62,7 +62,7 @@ export function AboutSection() {
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center py-5">
                 <div className="container-fluid">
                     <h1 className="largeH1">Hey There!</h1>
-                    <p className="pText">Bradley is a front-end developer who loves coffee, mayonnaise and using technology to solve problems. I am very passionate about creating web applications that improve the lives of human beings.</p>
+                    <p className="pText"> Bradley is a web developer based in Cape Town, South Africa. He creates fun, innovative, accessible and scalable web apps. Having experience working with tech startups and local businesses in South Africa, he is driven and passionate about improving the lives of human beings with technology.</p>
 
                     <div className="pt-4">
                         <Link href="https://linkedin.com/in/bradley-mubenga">
