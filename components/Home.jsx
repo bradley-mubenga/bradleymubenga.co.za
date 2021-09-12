@@ -63,9 +63,7 @@ export function AboutSection() {
                 <div className="container-fluid">
                     <h1 className="largeH1">Hey There!</h1>
                     <p className="pText"> Bradley is a web developer based in Cape Town, South Africa. He creates fun, innovative, accessible and scalable web apps.</p>
-                    <p className="pText"> Having experience working with tech startups and local businesses in South Africa, he is driven and passionate about improving the lives of human beings with technology.</p>
-
-                    <div className="pt-4">
+                    <div className="pt-4"></div>
 
                     <div className="pt-4">
                         <Link href="https://linkedin.com/in/bradley-mubenga">
