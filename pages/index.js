@@ -1,26 +1,29 @@
-import Head from 'next/head';
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
-//React & Next.js Components
-import Header from '../components/Header';
-import { HeroSection, AboutSection, RecentProjects, ContactForm } from '../components/Home';
-
-export default function Home({ projectData }) {
+export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
-        <title>Bradley Mubenga | Web Developer, Leader, Human.</title>
-        <meta name="description" content="Bradley is a full-stack developer who loves coffee, mayonnaise and using technology to solve problems." />
-        <link rel="icon" href="/favicon.png" />
+        <title>Creative Bradley | Video, Marketing & Web Design</title>
+        <meta name="description" content="Creative Bradley is a video, marketing & web design" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Coming Soon!
+        </h1>
 
-      <main className="fpParentElement">
-        <HeroSection />
-        <AboutSection />
-        <RecentProjects projectData={projectData}/>
-        <ContactForm />
+        <p className={styles.description}>
+          Hey there! I am currently updating my website, feel free to email me at <a href='mailto:mubengabradley@gmail.com'>mubengabradley@gmail</a> for any inquiries. Much love!
+        </p>
       </main>
-    </>
+
+      <footer className={styles.footer}>
+        <a href="mailto:mubengabradley@gmail.com">mubengabradley@gmail.com</a>
+      </footer>
+    </div>
   )
 }
