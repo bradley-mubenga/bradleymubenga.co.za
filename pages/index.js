@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Hey there! I am currently updating my website, feel free to email me at <a href='mailto:mubengabradley@gmail.com'>mubengabradley@gmail</a> for any inquiries. Much love!
+          Hey there! I am currently updating my website, feel free to email me at <a href='mailto:bradley@creativebradley.com'>bradley@creativebradley.com</a> for any inquiries. Much love!
         </p>
       </main>
 
