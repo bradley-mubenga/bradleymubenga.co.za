@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Navbar from '../components/navbar';
 
 export default function Home() {
   return (
-    <main>
-      <section>
-        <h1>Hello World</h1>
-      </section>
-    </main>
+    <>
+      <Navbar />
+    </>
   )
 }

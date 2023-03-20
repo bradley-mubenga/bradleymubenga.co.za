@@ -1,0 +1,138 @@
+@use "brand.scss";
+//Global Styles
+a
+{
+    color: brand.$green;
+    text-decoration: none;
+}
+a:hover
+{
+    color: brand.$green;
+    opacity: 0.75;
+    text-decoration: underline;
+}
+html
+{
+    scroll-behavior: smooth;
+    body
+    {
+        padding: 0;
+        margin: 0;
+        //Header - Navigation Bar
+        header
+        {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: medium;
+            background-color: brand.$cream;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            padding: 0.75em 0em;
+            div
+            {
+                img
+                {
+                    width: 100% !important;
+                    height: auto !important;
+                    max-width: 118.5px;           
+                }
+                ul
+                {
+                    display: flex;
+                    list-style-type: none;
+                    padding: 0;
+                    li
+                    {
+                        padding: 0 1em;
+                    }
+                }
+
+                button
+                {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: medium;
+                    padding: 0.65em 1.25em;
+                    cursor: pointer;
+                    border: 0.100em solid brand.$green;
+                    background-color: brand.$cream;
+                    color: brand.$green;
+                }
+                button:hover
+                {
+                    opacity: 0.75;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 999px)
+{
+    html
+    {
+        scroll-behavior: smooth;
+        body
+        {
+            padding: 0;
+            margin: 0;
+            //Header - Navigation Bar
+            header
+            {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: medium;
+                background-color: brand.$cream;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                padding: 0.75em 0em;
+                .navLinks
+                {
+                    display: none !important;
+                }
+                div
+                {
+                    img
+                    {
+                        width: 100% !important;
+                        height: auto !important;
+                        max-width: 118.5px;           
+                    }
+                    ul
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        list-style-type: none;
+                        padding: 0;
+                        li
+                        {
+                            padding: 1em 1em;
+                        }
+                    }
+
+                    button
+                    {
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: medium;
+                        padding: 0.65em 1.25em;
+                        cursor: pointer;
+                        border: 0.100em solid brand.$green;
+                        background-color: brand.$cream;
+                        color: brand.$green;
+                    }
+                    button:hover
+                    {
+                        opacity: 0.75;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
